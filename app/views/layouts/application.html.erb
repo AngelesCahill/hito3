@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hito3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "Home", home_index_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Ingresa tu proyecto", clients_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", user_session_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign-Out", new_user_registration_path %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <p class="notice"><%=notice%></p>
+    <%=alert%><%=alert%>
+    <%= yield %>
+  </body>
+</html>
